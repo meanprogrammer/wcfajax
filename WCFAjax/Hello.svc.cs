@@ -19,6 +19,7 @@ namespace WCFAjax
         //     and include the following line in the operation body:
         //         WebOperationContext.Current.OutgoingResponse.ContentType = "text/xml";
         [WebInvoke]
+        [WebGet]
         [OperationContract]
         public string DoWork()
         {
