@@ -9,6 +9,8 @@ using System.Text;
 
 namespace WCFAjax
 {
+
+    [ServiceContract]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class Hello : IHello
     {
