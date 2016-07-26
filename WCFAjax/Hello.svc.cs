@@ -9,9 +9,8 @@ using System.Text;
 
 namespace WCFAjax
 {
-    [ServiceContract(Namespace = "")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class Hello
+    public class Hello : IHello
     {
         // To use HTTP GET, add [WebGet] attribute. (Default ResponseFormat is WebMessageFormat.Json)
         // To create an operation that returns XML,
@@ -19,13 +18,10 @@ namespace WCFAjax
         //     and include the following line in the operation body:
         //         WebOperationContext.Current.OutgoingResponse.ContentType = "text/xml";
         [WebGet(ResponseFormat=WebMessageFormat.Json)]
-        [OperationContract]
         public string DoWork()
         {
             // Add your operation implementation here
             return "Hello From Ajax";
         }
-
-        // Add more operations here and mark them with [OperationContract]
     }
 }
